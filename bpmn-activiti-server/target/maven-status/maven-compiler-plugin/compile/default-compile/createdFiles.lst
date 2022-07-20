@@ -1,0 +1,8 @@
+cn\phecde\bpmn\activiti\config\ActivitiProperties$Log.class
+cn\phecde\bpmn\activiti\service\CustomTaskEventListener.class
+cn\phecde\bpmn\activiti\config\ActivitiAutoConfig.class
+cn\phecde\bpmn\activiti\BPMNActivitiApplication.class
+cn\phecde\bpmn\activiti\config\ResourceServerConfig.class
+cn\phecde\bpmn\activiti\service\CustomProcessEventListener.class
+cn\phecde\bpmn\activiti\config\ActivitiProperties.class
+cn\phecde\bpmn\activiti\config\ActivitiAutoConfig$1.class

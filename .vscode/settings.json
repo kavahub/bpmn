@@ -1,0 +1,10 @@
+{
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.templates.typeComment": [
+        "/**",
+        " * TODO",
+        " *  ",
+        " * @author PinWei Wan",
+        " */"
+      ],      
+}
