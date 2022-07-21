@@ -1,0 +1,49 @@
+server:
+  servlet.context-path: /bpmn-flowable
+  port: 9030
+
+spring:
+  application:
+    name: bpmn-flowable-server
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/flowable?characterEncoding=UTF-8&useSSL=true&nullCatalogMeansCurrent=true
+    username: root
+    password: root
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          # 需要在host文件中定义auth-server服务地址
+          jwk-set-uri: http://auth-server:9000/auth/realms/springseeds/protocol/openid-connect/certs
+
+flowable:
+  # The name of the auto deployment. Default is SpringBootAutoDeployment
+  deployment-name: PhecdeDevAutoDeployment 
+
+management:
+  endpoint:
+    flowable.enabled: true
+    health.show-details: always
+  endpoints: 
+    enabled-by-default: true
+    web.exposure.include: health,shutdown,env,info,flowable,mappings
+
+# 日志配置
+logging:
+  level:
+    ROOT: INFO
+    "[cn.phecde]": DEBUG    
+    "[org.springframework.security]": DEBUG
+    "[org.springframework.boot]": INFO
+    "[org.springframework.web]": DEBUG
+    "[org.flowable]": DEBUG
+
+phecde.bpmn.flowable:
+  log:
+    taskEventEnabled: true
+    processEventEnabled: true   
+
+
+
