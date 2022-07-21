@@ -6,6 +6,14 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BPMNFlowableApplication",
+            "request": "launch",
+            "console": "internalConsole",
+            "mainClass": "cn.phecde.bpmn.flowable.BPMNFlowableApplication",
+            "projectName": "bpmn-flowable-server"
+        },
+        {
+            "type": "java",
             "name": "BPMNActivitiApplication",
             "request": "launch",
             "console": "internalConsole",

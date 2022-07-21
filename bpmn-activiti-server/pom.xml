@@ -103,7 +103,7 @@
                                 <image>openjdk:11</image>
                             </from>
                             <to>
-                                <image>registry.cn-hangzhou.aliyuncs.com/beidou/${project.groupId}.${project.artifactId}</image>
+                                <image>registry.cn-hangzhou.aliyuncs.com/beidou/${project.artifactId}.${project.version}</image>
                                 <tags>
                                     <!--版本号-->
                                     <tag>${project.version}</tag>

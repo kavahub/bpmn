@@ -29,5 +29,5 @@ mvn compile jib:build -Pali-docker
 
 本地拉取并运行镜像
 ```
-docker run -p 9030:9030 --link mysql:mysql --name bpmn-activiti-server -d registry.cn-hangzhou.aliyuncs.com/beidou/cn.marak.oss.local-server
+docker run -p 9030:9030 --link mysql:mysql --name bpmn-activiti-server -d registry.cn-hangzhou.aliyuncs.com/beidou/bpmn-activiti-server-7.2.0.java
 ```

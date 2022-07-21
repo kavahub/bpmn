@@ -1,5 +1,8 @@
 package cn.phecde.bpmn.activiti.config;
 
+import org.activiti.engine.RepositoryService;
+import org.activiti.engine.TaskService;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -8,14 +11,14 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import cn.phecde.bpmn.activiti.service.CustomProcessEventListener;
-import cn.phecde.bpmn.activiti.service.CustomTaskEventListener;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 自动配置
  *  
  * @author PinWei Wan
  */
+@Slf4j
 @Configuration
 @EnableConfigurationProperties({ActivitiProperties.class})
 public class ActivitiAutoConfig {
@@ -40,5 +43,18 @@ public class ActivitiAutoConfig {
     @ConditionalOnProperty(prefix = "phecde.bpmn.activiti.log", name = "taskEventEnabled", havingValue = "true")
     public CustomTaskEventListener customTaskEventListener() {
         return new CustomTaskEventListener();
+    }
+
+    @Bean
+    public CommandLineRunner queryInfomation(final RepositoryService repositoryService,
+                                  final TaskService taskService) {
+
+        return new CommandLineRunner() {
+            @Override
+            public void run(String... strings) throws Exception {
+                log.info(">>> Number of process definitions [{}]", repositoryService.createProcessDefinitionQuery().count());
+                log.info(">>> Number of tasks [{}]", taskService.createTaskQuery().count());
+            }
+        };
     }
 }

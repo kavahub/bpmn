@@ -19,7 +19,8 @@ public class ResourceServerConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .authorizeRequests()
                 .anyRequest()
-                .authenticated()
+                //.authenticated()
+                .permitAll()
                 .and()
                 .oauth2ResourceServer()
                 .jwt();

@@ -28,6 +28,7 @@
 
     <modules>
         <module>bpmn-activiti-server</module>
+        <module>bpmn-flowable-server</module>
     </modules>
 
     <dependencyManagement>
@@ -41,8 +42,4 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <build>
-        <finalName>${project.groupId}.${project.artifactId}-${project.version}</finalName>
-    </build>
 </project>

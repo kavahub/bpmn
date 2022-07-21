@@ -1,4 +1,4 @@
-package cn.phecde.bpmn.activiti.service;
+package cn.phecde.bpmn.activiti.config;
 
 import org.activiti.api.model.shared.event.RuntimeEvent;
 import org.activiti.api.model.shared.event.VariableCreatedEvent;

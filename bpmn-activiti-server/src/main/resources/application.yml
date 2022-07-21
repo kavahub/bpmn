@@ -25,6 +25,7 @@ logging:
     "[cn.phecde]": DEBUG    
     "[org.springframework.security]": DEBUG
     "[org.springframework.web]": DEBUG
+    "[org.activiti]": DEBUG
 
 phecde.bpmn.activiti:
   log:
