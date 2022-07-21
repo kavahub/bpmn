@@ -10,7 +10,6 @@ import org.activiti.api.process.runtime.ProcessRuntime;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Import;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -20,7 +19,6 @@ import lombok.extern.slf4j.Slf4j;
  * @author PinWei Wan
  */
 @SpringBootTest(classes = { BPMNActivitiApplication.class })
-@Import(ProcessConnectorConfig.class)
 @TestProfiles
 @Slf4j
 public class ProcessTests {
